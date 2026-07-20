@@ -1,0 +1,100 @@
+is at type of array
+orderde in nature
+
+syntax=
+
+1.
+
+list =["k","u",1,2,3,3,];
+print(list)
+
+
+2. to find length of list
+
+list =["k","u",1,2,3,3,];
+print(len(list))
+
+
+3.to find type of data type
+
+list =["k","u",1,2,3,3,];
+print(type(list))
+
+
+
+4. to declare a list we can also use list constructor{ here constructr is used s a funtion},{{{ remebrer to use double paraentices for the constructor}}}
+
+names = list(("anil","sunil","ajay")); 
+print(names)
+print(type(names))
+
+
+5.# to acces the list item from the lsit
+#indexing start from zero
+it goes from left to right
+
+names = list(("anil","sunil","ajay")); 
+print(list[0])
+
+#print first elemet of the list
+
+
+6. using while loop
+
+names = list(("anil","sunil","ajay")); 
+i=0
+while i<len(names):
+    print(names[i])
+    i+=1
+
+
+7. for negative indexing
+   it goes from right to left
+   it startr dfrom -1 
+
+names = list(("anil","sunil","ajay")); 
+print(names[-1])
+
+
+  it started from -1 so 
+  it print ajay
+
+
+8. to skip from range
+
+fruits=["apple", "banana","grapes", "cherry","mangao", "peach", "guava"];
+print(fruits[1:6:2])               
+
+
+  fruits[1:6:2]
+  here (starting: ending(less than 1): jump / skip)
+
+
+9. IN OPEARTOR
+      
+   used to check whater the elemenyt exist in list or not
+
+syntax:::
+	if value in listname:
+		print("found")
+	else:
+		print("not found")
+
+example:::
+
+
+fruits=["apple", "banana","grapes", "cherry","mangao", "peach", "guava"];
+if "orange" in fruits:
+    print("elementt found")
+else:
+    print("not found")
+
+   
+
+
+10. update the elemeny  of the list by range
+
+city=["sancer","rau","pithapur", "mhow","ujjain"];
+print(city)
+city[1:3]=["inodre","dewas"]
+print(city)
