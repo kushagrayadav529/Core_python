@@ -1,0 +1,137 @@
+		#21/07/2026
+
+		#List Function
+
+
+#1. Insert Function
+    #Inverting of a element at a specific element
+
+
+
+city=["Indore","dewas","ujjain","bhopal"];
+print(city)
+city.insert(2,"dhar")
+print(city)	
+
+
+
+
+#2. Append function
+    #Inserting element at the last of the list
+
+city=["Indore","dewas","ujjain","bhopal"];
+print(city)
+city.append("dhar")
+print(city)
+
+
+
+#3. Extend function(can also called as concatination of the list)
+    #Adds all elements from another iterable (list, tuple, etc.) to the end of the list
+
+
+city=["Indore","dewas","ujjain","bhopal"];
+print(city)
+city2=["Mhow","pithampur"];
+city.extend(city2)
+print(city)
+
+
+
+#4. Remove function
+    #Removes the first occurrence of x. Raises ValueError if not found.
+    #it deletes from the left to right
+
+
+city=["Indore","dewas","ujjain","bhopal","bilashpur"];
+print(city)
+city2=["Mhow","pithampur","bilashpur"];
+city.extend(city2)
+print(city)
+city.remove("bilashpur")
+print(city)
+
+
+#5. Pop Function
+    # delete the item index wise
+    #if we dont provide the index it will delete the last element
+    #Removes and returns element at index i (last if omitted).	
+
+
+city=["Indore","dewas","ujjain","bhopal","bilashpur","Mhow","pithampur","bilashpur"];
+print(city)
+city.pop(2)
+print(city)
+city.pop()
+print(city)
+
+
+
+
+#6. del function
+    # Same as pop
+    # But if we dont  provide the index it delete the entire list
+
+
+
+city=["Indore","dewas","ujjain","bhopal","bilashpur","Mhow","pithampur","bilashpur"];
+print(city)
+del city[1]                    #{{it will delete element at the index of 1}}
+print(city)
+del city                        #(((It will delete entire list))))
+print(city)
+
+
+
+
+#7. Clear function
+    # it removes all th element from the liast
+
+
+
+city=["Indore","dewas","ujjain","bhopal","bilashpur","Mhow","pithampur","bilashpur"];
+print(city)
+city.clear()
+print(city)
+
+
+
+#			For loop
+#		     _______________
+
+
+#A for loop in Python is used to iterate over a sequence (list, tuple, string,     dictionary, set, or range).
+#    for variable in sequence:
+   	 # code block
+
+#1. basic code
+
+city=["Indore","dewas","ujjain","bhopal","bilashpur","Mhow","pithampur","bilashpur"];
+for i in city:
+    print(i)
+
+
+#2. For string
+
+for i in "Kushagra":
+    print(i)
+
+
+#3.  For printing of number
+
+for i in range(1,11):
+    print(i)
+
+
+
+#4. For printing of number byy incrementing the number by 2
+
+for i in range(1,21,2):
+    print(i)
+
+
+#5. Nested for loop
+
+# for v in list
+#	for y in list2
+#		print(v,y)
