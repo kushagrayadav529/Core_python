@@ -1,0 +1,126 @@
+	Tuple
+
+
+
+Tuples are used to store multiple items in a single variable.
+Tuples are immutable.
+Tuples items are ordered, allow duplicate values.
+
+Syntax:
+
+
+1. Basic
+fruits=("apple","banana","cherry")
+print(fruits)
+
+2. To find type
+fruits=("apple","banana","cherry")
+print(type(fruits))
+
+
+3. To find length of tuple
+fruits=("apple","banana","cherry")
+print(len(fruits))
+
+
+4. Printing from the loop
+fruits=("apple","banana","cherry","mango","peach")
+for i in fruits:
+    print(i)
+
+
+5. Printing from indexing
+fruits=("apple","banana","cherry","mango","peach")
+print(fruits[:4])
+print(fruits[-1:])
+print(fruits[:5:2])
+
+
+6. Count method
+	return the number of times a value occur
+
+fruits=("apple","banana","cherry","mango","peach")
+print(fruits.count("apple"))
+
+
+7. Return method
+	return the index of serched element
+
+
+fruits=("apple","banana","cherry","mango","peach")
+print(fruits.index("cherry"))
+
+
+
+8. Modifing of the tuple by list(tuple to list, list function , then back to tuple)
+
+fruits = ("apple", "banana", "cherry", "mango", "peach")
+print(fruits)  # Original tuple
+
+fruitl = list(fruits)  # Convert tuple to list
+fruitl[1] = "grapes"   # Change "banana" to "grapes"
+
+fruits = tuple(fruitl)  # Convert back to tuple
+print(fruits)  # Updated tuple
+
+
+
+9. Adding two tuples
+
+
+fruits=("apple","banana","cherry","mango","peach")
+print(fruits)
+
+fruits2=("mango","watermelon" )
+print(fruits2)
+
+fruits+=fruits2
+print(fruits)
+
+t=fruits+fruits2
+print(t)
+
+
+10. Deletion of entire tuple
+ 
+fruits=("apple","banana","cherry","mango","peach")
+print(fruits)
+
+del fruits
+print(fruits)
+
+
+11. Tuple packing
+	Tuple packing means putting multiple values into a single tuple.
+
+    Tuple unpacking
+	Tuple unpacking means extracting values from a tuple into separate variables.
+
+
+packed_tuple = 10, 20, 30, "Python"
+
+print("Packed Tuple:", packed_tuple)
+print("Type:", type(packed_tuple))
+
+a, b, c, d = packed_tuple
+
+print("a:", a)
+print("b:", b)
+print("c:", c)
+print("d:", d)
+
+
+12. 
+
+city=("indpre","dhar","ujjain","deas","jabalpur")
+(indore,dhar,ujjain,*citylist) = city
+print(indore)
+print(dhar)
+print(ujjain)
+print(citytlist)
+
+13. Printing the element of the tuple 3 times
+
+city=("indpre","dhar","ujjain","deas","jabalpur")
+mytuple=city*3
+print(mytuple)
