@@ -1,0 +1,88 @@
+			 SETS
+
+
+It is extention of tuple
+It is used to store multiple items in a single variable
+It is unordered, Unchangeable and unindexed
+It is unchangeble but you can remove items and add new items(expand)
+Here dublicates are not allowed
+Boolean is same
+
+
+SYNTAX:
+
+1. Basic Syntax
+
+city={"indore","dhar","ujjain","deas","jabalpur"}
+print(city)
+
+
+2. Duplicate values are not printing
+
+city={"indore","dhar","ujjain","dewas","jabalpur","indore","ujjain"}
+print(city)
+
+
+3. Printing of boolean
+
+city={"indore","dhar","ujjain","dewas","jabalpur","indore", True, False, 0}
+print(city)
+
+4. Finding the type 
+
+city={"indore","dhar","ujjain","dewas","jabalpur",True, False, 0}
+print(type(city))
+
+
+5. Removing of duplicates from the list by using set
+
+city=["indore","dhar","ujjain","dewas","jabalpur","indore"]
+print("Before",city)
+city2=set(city)				##list is convert to set
+print("After:",city2)
+
+6.  In And NOT In Operator 
+	(to check wheather the element is present or not in the set)
+
+city={"indore","dhar","ujjain","dewas","jabalpur","indore"}
+print("indore" in city)
+print("indore" not in city)
+print("delhi" in city)
+
+
+
+7. Add, Remove, DIscard method
+	Add is used to add element
+	Remove is uused to remove the element if not found it will error
+	Disceard is same as remove but it will not give error if elemnt not found
+
+student={"vedansh","aditya","mahak","tarun","rishi"}
+print(student)
+student.add("Kushagra")
+print(student)
+student.remove("tarun")
+print(student)
+student.discard("vimal")
+print(student)
+
+
+8. To update or extend the set
+
+student={"vedansh","aditya","mahak","tarun","rishi"}
+str=["pari", "priyanshi"]
+student.update(str)
+print(student)
+
+
+
+student={"vedansh","aditya","mahak","tarun","rishi"}
+student.update({"kush"},[2,5])
+print(student)
+
+
+
+9. Frozen set
+
+	Used to create immutable version of set
+	Here Adding and removing of elemnt are stoped
+
