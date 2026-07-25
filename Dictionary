@@ -1,0 +1,61 @@
+
+Dictonaries are used to store data values in the foem of (key:value) pairs.
+It is ordered , changeable and do not allow duplicate value.((changeble:value can be changed on index)).
+Values can be same but keys cant be same.
+Key cant be null but value can be null.
+Dictionary in python is same as json of javascript and also hashmap in java.
+
+Syntax:
+
+1. Basic syntax
+
+mydict={"name":"Kush", "city": "indore","dob":"12-2-2002"}
+print(mydict)
+
+2.  Here the city value wuill be updated from indore to ujjain (it will take ujjain for the city key)
+
+mydict={"name":"Kush", "city": "indore","course":"btech","city":, "ujjain"}
+print(mydict)
+
+3. Key storing multiple value for colour
+
+mydict={"name":"Kush", "city": "indore","course":"btech","colour":["r", "g"]}
+print(mydict)
+
+4. Creating dictioanry using constructor((dict))
+
+m=dict(name="kusj", city="indore")
+print(m)
+
+5. Accesing the element from the key and get method(( here we have to give key name for the both to get teh value))
+
+mydict={"name":"Kush", "city": "indore","course":"btech","colour":["r", "g"]}
+print(mydict["name"])
+print(mydict.get("city"))
+
+6. keys method and value method to get list of keys and value present in the dictionary
+
+mydict={"name":"Kush", "city": "indore","course":"btech","colour":["r", "g"]}
+x=mydict.keys()
+print(x)
+y=mydict.values()
+print(y)
+
+7. items method (it will return each item in a dictionary as tuples in a list)
+
+
+mydict={"name":"Kush", "city": "indore","course":"btech","colour":["r", "g"]}
+x=mydict.items()
+print(x)
+
+
+8. in & not in  ( it will work on keys not in values)(true if present otherwise fale)
+
+mydict={"name":"Kush", "city": "indore","course":"btech","colour":["r", "g"]}
+x="name" in mydict
+print(x)
+
+
+mydict={"name":"Kush", "city": "indore","course":"btech","colour":["r", "g"]}
+x="age" not in mydict
+print(x)
