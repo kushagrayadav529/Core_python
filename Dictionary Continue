@@ -1,0 +1,52 @@
+1. Copy function
+
+Used to create a copy of the a dictionary   
+
+mydict={"name":"Kush", "city": "indore","course":"btech"}
+
+dict2=mydict.copy()
+print(dict2)
+
+print(dict is mydict) 
+{it gives false beacuse they are niot same}
+
+
+2. is operaator (it is used to check reference variable)
+
+mydict={"name":"Kush", "city": "indore","course":"btech","colour":["r", "g"]}
+
+dict2=mydict;
+print(dict2)
+
+print(dict is mydict) 
+
+{it gives false beacuse they are niot same}
+
+-----------------------------------------------------
+Composite Attribute:-(that can be broken)(made of multiple single attribute)(eg- name)
+Single Attribute:-(that can be brokne)(eg- first name, mname, last name)
+-----------------------------------------------------
+
+
+3. Nested Dictionary storing multiple values
+
+mystu={"stud1":
+    {"name":"tarum",
+    "phone":987655,
+    "skill":"python"},
+       
+    "stud2":{
+     "name":"kush",
+    "phone":987675,
+    "skill":"java"},
+       
+    "stud3":{
+    "name":"vedansh",
+    "phone":987645,
+    "skill":"flask"}
+}
+ 
+for k,v_obj in mystu.items():
+    print(k)
+    for st_key in v_obj:                         # it will return each key from v_obj
+        print(st_key +':',v_obj[st_key])
