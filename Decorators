@@ -1,0 +1,71 @@
+- It is a type of function which is called over another function which is called with the help of "@" which pweform the extra task afyer execution of the main function call.
+- A decorator is a function that takes another function as input and returns a new function with added behavior.
+- Wrapping of function
+
+
+1. Concatination of word with th ehelp of decorator
+
+def my_deco(fun_obj):
+    def myinner():
+        return fun_obj()+"$"
+    return myinner
+@my_deco
+def show():
+    return "Hello world"
+
+print(show())
+
+2.  Converting String upper case to lower case
+
+def my_deco(fun_obj):
+    def myinner():
+        return fun_obj().lower()
+    return myinner
+@my_deco
+def show():
+    return "HELLO WORLD"
+
+print(show())
+
+3. To pass parameters in decorators
+
+def multi2(fun_obj):
+    def myinner(arg):
+        return fun_obj(arg)*2
+    return myinner
+        
+@multi2
+def fun(x):
+    x= int (input ("enter no.:"))
+    return x
+
+print(fun(10))
+
+
+4. to print square of a number
+
+def multi2(fun_obj):
+    def myinner(arg):
+        return fun_obj(arg)**2
+    return myinner
+        
+@multi2
+def fun(x):
+    x= int (input ("enter no.:"))
+    return x
+
+print(fun(0))
+    
+
+5. Decorators with multiple argumenst and key value pairs
+
+def multi2(fun_obj):
+    def myinner(*arg):
+        return fun_obj(*arg).upper()
+    return myinner
+        
+@multi2
+def fun(*x):
+    return "Welcome "+x[0]+x[1]
+
+print(fun("anil","sunil","ajay"))
