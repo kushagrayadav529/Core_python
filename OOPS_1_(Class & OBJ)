@@ -1,0 +1,111 @@
+	  
+ 			   OOPS
+		
+Object Oriented Programming Language.
+
+
+
+	CLASS:-
+A class is a blueprint.
+"class" keyword is useed to declare the class.
+ Varible declared is by deault it is public in nature.
+"pass" is used to just declare the class with empty variables and method.
+"__init__" is the constructor in python classes.
+
+	OBJECT:-
+Object are real entities which posses class properties.
+"del" is used to delete the object.
+object declarartion has no limt but it have restrcition on memory.
+
+Syntax:-
+
+1. Basic 
+
+class myfirst:
+    no=100
+print("my first class")
+
+obj = myfirst()
+print(obj.no)
+
+{{{{
+
+==This keyword is declared as self in python.
+this keyword is used to store reference to current object.
+self  It allows access to instance variables and methods.
+
+}}}}
+
+
+2. init keyword and self keyword code
+
+class students:
+    def __init__(self, name, dob, city):
+        self.name=name
+        self.dob=dob
+        self.city=city
+
+s1=students("kush","23-01-2004","indore")
+s2=students("vansh","23-11-2004","dewas")
+
+print(s1.name)
+print(s1.dob)
+print(s1.city)
+print(s2.name)
+print(s2.dob)
+print(s2.city)
+
+
+3. Default value for object 
+if  value is not provided deafult value is picked, else it is overwridden
+
+class students:
+    def __init__(self, name, dob, city="indore"):
+        self.name=name
+        self.dob=dob
+        self.city=city
+
+s1=students("kush","23-01-2004","ujjain")
+s2=students("vansh","23-11-2004")
+
+print(s1.name)
+print(s1.dob)
+print(s1.city)
+print(s2.name)
+print(s2.dob)
+print(s2.city)
+
+
+4. Methods declaration in class
+
+class students:
+    def __init__(self,name, dob, city):
+        self.name=name
+        self.dob=dob
+        self.city=city
+
+    def st_out(self):
+        print("Name of student:",self.name)
+        print("Dob of student",self.dob)
+        print("City of student",self.city)
+
+s1=students("kush","23-02-298","indore")
+s1.st_out()
+
+5. To find factorial from decorators usning
+
+class students:
+    def __init__(self,fact):
+        i=1
+        fact=1
+        while i<=n:
+            fact=fact*i
+            i+=1
+        self.fact=fact
+        
+    def output(self):
+        print("Factorial of the given number: ",self.fact)
+        
+n=int(input("Enter the number whose factorial u wanna get:"))        
+s1=students(n)
+s1.output()
