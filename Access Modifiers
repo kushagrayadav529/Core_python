@@ -1,0 +1,40 @@
+It is  used to control the visibility and accessibility of class members (attributes and methods) to enforce encapsulation, a key principle of object-oriented programming (OOP). Python supports three types of access modifiers: public, protected, and private.
+
+* by default it is public *
+
+1..  Protected members are intended to be accessed only within the class and its subclasses. They are denoted by a single underscore (_) prefix. However, this is a convention and not strictly enforced by Python. Object is allowed to access if it is called explicitly.
+
+2..  Private members are strictly intended for use within the class. They are denoted by a double underscore (__) prefix. Python uses name mangling to make private members harder to access from outside the class. 
+
+
+Syntax: 
+
+1. for public access modifiers
+
+class public_d:
+    def __init__(self,name,city):
+       self.name=name
+       self.city=city
+    def output(self):
+        print(self.name)
+        print(self.city)
+        
+obj = public_d("kush","indore")
+obj.output()
+
+
+2. Name mnagling is only for private
+   Name Mangling in Python is a mechanism that Python uses to make class attributes less accessible from outside the class and to avoid accidental name conflicts, especially in inheritance scenarios.
+
+class emp:
+    def __init__(self,name,city,salary):
+       self.__name=name
+       self.__city=city
+       self.__salary=salary
+    def output(self):
+        print(self.__name)
+        print(self.__city)
+        
+obj = emp("kush","indore",34500)
+obj.output()
+print(obj._emp__salary)
