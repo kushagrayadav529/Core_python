@@ -1,0 +1,130 @@
+
+To perform a specific task multiple times, which may or may not return output.
+Fetching of the data from some othrer resoruces or file.
+A function is a reusable block of code that performs a specific task.
+It helps make programs modular, readable, and maintainable.
+Function here is almost same as javascript(tyscript(superset of javascript)).
+
+eg , temperature calculation
+
+
+syntax:
+
+" def "  is used to define function in python
+
+
+def functionname():
+	code
+	code
+ 
+Functionname(argument, argument2)					# to call function
+
+# any variable defined inside a function will lies inside the function, its scope is till the excution of the function.
+
+# if we want a variable to be accesible outside of the function we will have to declare using global keyword
+
+RULES TO DECLARE A FUNCTION NAME:---
+
+1. start with small letter or underscore
+2. it can only contain alphabets, number and underscore
+3. camel case in not allowed
+4. it is case sentisitive()
+
+
+Code:
+
+1. basic 
+
+def msg():
+    print("hi there, it is user defined function")
+msg()
+
+2. Simple interset for different values
+
+def msg(p,r,t):
+    s=(p*r*t)/100
+    return s
+    
+print(msg(1000,10,5))
+print(msg(1000,12,5))
+print(msg(1000,5,8))
+
+
+
+3.  To calculate the si and ci for days months and year
+
+def interest():
+    p=int(input("Enter principle:"))
+    r=int(input("Enter rate of intrest"))
+    t=int(input("Enter time  :"))
+    print("for days selelct 1")
+    print("for year selelct 2")
+    print("for month select 3")
+    c=int(input("enter your choice: "))
+    if c==1:
+        t=t/365
+    elif c==2:
+         t=t
+    elif c==3:
+         t=t/12;
+    else:
+        print("Invalid choice")
+        return
+
+    si=(p*r*t)/100
+    amount=p*(pow((1+r/100),t))
+    ci=amount-p
+
+    print("Simple interest", si)
+    print("Compound interest",ci)
+        
+interest()
+
+
+4. Pass statement :- It is a null operation — when executed, it does nothing at all.
+
+def interest():
+	pass
+interest()
+
+
+5. ((*)) :- *args — Variable Positional Arguments, Collects extra positional arguments into a tuple, we can pass multiple no of arguments here
+
+def my_color(*colorlist):
+    print(colorlist)
+
+my_color("red","green","blue")
+
+
+6. args with named argument
+
+def stu_list(st1,*sttuple):
+    print(st1)
+    print(sttuple)
+
+stu_list("anil","sunil","vijay","binod")
+
+
+anil is stored in st1
+else is stored in the sttuple 
+
+
+7. to find max from n no using* args
+
+def max_n(*numbers):
+    maxnum=numbers[0]
+    for i in numbers:
+        if i> maxnum:
+            maxnum=i
+    print("Maximun nuber",maxnum)
+max_n(0,22,3,5,2)
+
+
+8. (**kwargs):- Variable Keyword Arguments, same as args but it is used to store dictionary, Collects any number of extra keyword arguments into a dictionary.
+
+
+def dict_args(**dict_data):
+    print(dict_data)
+    print(dict_data["age"])
+    
+dict_args(fname="kush", age="22",dob="23-10-2004")
