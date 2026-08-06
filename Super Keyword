@@ -1,0 +1,25 @@
+The super() function is used to call methods (or access properties) from a parent (superclass) inside a child (subclass).
+
+
+class Person:
+    def __init__(self,name,dob,mobile):
+        self.name=name
+        self.dob=dob
+        self.mobile=mobile
+
+    def prn_person(self):
+        print(self.name, self.dob, self.mobile)
+
+class student(Person):
+    def __init__(self,name, dob, mobile, classname, subject,course):
+        super().__init__(name,dob,mobile)   #to caall parent class init method with the parentclass nane like Person.__init__()
+        self.classname=classname
+        self.subject=subject
+        self.course=course
+
+    def print_stu_details(self):
+        print(self.name, self.dob, self.mobile)
+        print(self.classname, self.subject, self.course)
+        
+obj=student("kush","january",987654321,"b tech", "cse", "it ")
+obj.print_stu_details()
